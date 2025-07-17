@@ -1,0 +1,103 @@
+Cofigure Trunking in Switch
+
+BlueZone
+
+Trunking VLAN10
+Switch>enable
+Switch#configure terminal
+Switch(config)#vlan 10
+Switch(config-vlan)#name bluezone
+Switch(config-vlan)exit
+
+Switch(config)#interface range fastethernet1/1, fastethernet2/1,fastethernet3/1, fastethernet4/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#exit
+
+Switch(config)#interface fastethernet0/1
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#exit
+
+Trungking VLAN20
+Switch>enable
+Switch#configure terminal
+Switch(config)#vlan 20
+Switch(config-vlan)#name bluezone
+Switch(config-vlan)exit
+
+Switch(config)#interface range fastethernet5/1, fastethernet6/1,fastethernet7/1, fastethernet8/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#exit
+
+Switch(config)#interface fastethernet0/1
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#exit
+
+GreenZone
+
+Trunking VLAN30
+Switch>enable
+Switch#configure terminal
+Switch(config)#vlan 30
+Switch(config-vlan)#name greenzone
+Switch(config-vlan)exit
+
+Switch(config)#interface range fastethernet1/1, fastethernet2/1,fastethernet3/1, fastethernet4/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 30
+Switch(config-if)#exit
+
+Switch(config)#interface fastethernet0/1
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#exit
+
+Trunking VLAN40
+Switch>enable
+Switch#configure terminal
+Switch(config)#vlan 40
+Switch(config-vlan)#name greenzone
+Switch(config-vlan)exit
+
+Switch(config)#interface range fastethernet5/1, fastethernet6/1,fastethernet7/1, fastethernet8/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 40
+Switch(config-if)#exit
+
+Switch(config)#interface fastethernet0/1
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#exit
+
+RedZone
+
+Trunking VLAN50
+Switch>enable
+Switch#configure terminal
+Switch(config)#vlan 50
+Switch(config-vlan)#name greenzone
+Switch(config-vlan)exit
+
+Switch(config)#interface range fastethernet1/1, fastethernet2/1,fastethernet3/1, fastethernet4/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 50
+Switch(config-if)#exit
+
+Switch(config)#interface fastethernet0/1
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#exit
+
+Trunking VLAN60
+Switch>enable
+Switch#configure terminal
+Switch(config)#vlan 60
+Switch(config-vlan)#name greenzone
+Switch(config-vlan)exit
+
+Switch(config)#interface range fastethernet5/1, fastethernet6/1,fastethernet7/1, fastethernet8/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 60
+Switch(config-if)#exit
+
+Switch(config)#interface fastethernet0/1
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#exit
